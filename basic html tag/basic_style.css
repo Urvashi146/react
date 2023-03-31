@@ -1,0 +1,50 @@
+
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          text-align: center;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          
+        }
+        th {
+          background-color: #96D4D4;
+        }
+        td {
+          background-color: #f7d1f2;
+        }
+        h1{text-align: center;
+        text-decoration: underline;}
+
+        h2{
+            color: blueviolet;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        pre{
+            text-align: center;
+            font-weight: bold;
+            
+        }
+        .tdform
+        {
+            background-color:green;
+            /* outline: none; */
+            outline: 0px solid transparent;
+            
+        }
+        /* input {
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style:hidden;
+            /* background-color: #eee; */
+            width: 99%;
+            
+          } */
+          .no-outline:focus {
+            outline: none;
+          }
+     

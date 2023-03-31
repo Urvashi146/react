@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAm4OErmRdOi95D9_tKeUlK-olK1TzR3dDFKWxnJMfQ&usqp=CAU&ec=48665701">
+    <link rel="stylesheet" href="formstyle.css">
+    <!-- <style>
+            td 
+            { 
+                padding-top: 10px;
+            }
+            fieldset 
+            {
+                border:1px solid #f27373;
+                /* border-radius:8px; */
+                box-shadow:0 0 40px #e36a6a;
+                width: 50%; 
+                border-radius: 15px;
+                /* border-color: rgb(226, 24, 24) */
+            }
+            legend 
+            {
+                background:#f3b4b4;
+                border-radius: 10px;
+                border:1px solid #f27373;
+                box-shadow:0 0 40px #e36a6a;
+            }
+            .button 
+            {
+                border: none;
+                border-radius: 10px;
+                color: rgb(241, 110, 54);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .button1 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+            }
+
+            .button1:hover 
+            {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .button2 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #008CBA;
+            }
+
+            .button2:hover
+            {
+                background-color: #008CBA;
+                color: white;
+            }
+            .button3 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #f30707;
+            }
+            .button3:hover
+            {
+                background-color: #f90404;
+                color: rgb(244, 239, 239);
+            }
+           
+    </style> -->
+</head>
+<body>
+
+    <h1 style="text-align:center;">This is My first Form</h1>
+<center>
+  
+    <form autocomplete="on">
+        <fieldset>
+            <legend><strong>Registration Form</strong></legend>
+            
+            <table>
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td><input  type="text" name="name" value="" placeholder="Enter your name here" autofocus></td>
+                     </tr>
+                     <tr>
+                        <td><strong>emailID:</strong></td>
+                        <td><input  type="email" name="email" value="" placeholder="Enter emailid"></td>
+                     </tr>
+                     <tr>
+                        <td><strong>Password</strong></td>
+                        <td><input  type="password" name="password" value="" placeholder="Enter password"></td>
+                     </tr>
+                     <tr>
+                        <td><strong>Date Of Birth</strong></td>
+                        <td><input type="date" name="dob" value=""></td>
+                     </tr>
+                     <tr>
+                        <td><strong>Birth Month Year</strong></td>
+                        <td><input type="month"></td>
+                     </tr>
+                     <tr>
+                        <td><strong>DOB With Time</strong></td>
+                        <td><input type="datetime-local"></td>
+                     </tr>
+                     
+                     <tr>
+                        <td><strong>Experience</strong></td>
+                        
+                        <td>
+                           
+                            <input type="number" name="exp" value=""  min="0" max="5"></td>
+                     </tr>
+                     <tr>
+                        <td><strong>Resume Please</strong></td>
+                        <td><input type="file" name="file" value="" ></td>
+                     </tr>
+                     <tr>
+                        <td><strong>Skill</strong></td>
+                        <td>
+                            <input list="skill" name="skill">
+                            <datalist id="skill">
+                                <option value="HTML">
+                                <option value="CSS">
+                                <option value="JAVASCRIPT">
+                                <option value="JQUERY">
+                                <option value="SQL">
+                           </datalist>
+                      </td>
+                     </tr>
+                     <tr>
+                        <td><strong>mobile:</strong></td>
+                        <td><input type="text" name="mobile" value="" placeholder="Enter Something"></td>
+                     </tr>
+                     <tr>
+                        <td><strong>hobby:</strong></td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="gaming"><strong>gaming</strong>
+                            <input type="checkbox" name="hobby" value="coding" checked><strong>coding</strong>
+                            <input type="checkbox" name="hobby" value="singing"><strong>singing</strong>
+                            
+                        </td>
+                        
+                      </tr>
+                     <tr>
+                        <td><strong>gender</strong></td>
+                        <td>
+                            <input type="radio" name="gender" value="male"><strong>Male</strong>
+                            <input type="radio" name="gender" value="female" checked ><strong>Female</strong>
+                            
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><strong>Address:</strong></td>
+                        <td><textarea rows="5" cols="20">Enter your address here....</textarea></td>
+                     </tr>
+                     <tr>
+                        <td><strong>fav color:</strong></td>
+                        <td><input type="color" name="color"></td>
+                     </tr>
+                     
+                     <tr colspan="2">
+                       <td><input type="checkbox" name="terms" value=""></td>
+                        <td><strong>Agree terms and condition</strong></td>
+                     </tr>
+                     <tr colspan="2">
+                        <td style="padding-left: 40px;padding-right: 40px;"><button class="button button1" type="button" name="back">back</button></td>
+                        <td style="padding-right:0px;padding-left: 40px;"><button class="button button2" type="button" name="submit">submit</button>
+                        
+                    </td>
+                     </tr>
+                     
+                
+            </table>       
+      </fieldset>
+    </form>
+</center>
+</body>
+</html>

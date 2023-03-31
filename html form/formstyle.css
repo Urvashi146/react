@@ -1,0 +1,84 @@
+           td 
+            { 
+                padding-top: 8px;
+                
+            }
+            
+            fieldset 
+            {
+                border:1px solid #f27373;
+                /* border-radius:8px; */
+                box-shadow:0 0 40px #e36a6a;
+                width: 30%; 
+                border-radius: 15px;
+                /* border-color: rgb(226, 24, 24) */
+                
+            }
+            legend 
+            {
+                background:#f3b4b4;
+                border-radius: 10px;
+                border:1px solid #f27373;
+                box-shadow:0 0 40px #e36a6a;
+            }
+            .button 
+            {
+                border: none;
+                border-radius: 10px;
+                color: rgb(241, 110, 54);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .button1 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+            }
+
+            .button1:hover 
+            {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .button2 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #008CBA;
+            }
+
+            .button2:hover
+            {
+                background-color: #008CBA;
+                color: white;
+            }
+            .button3 
+            {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #f30707;
+            }
+            .button3:hover
+            {
+                background-color: #f90404;
+                color: rgb(244, 239, 239);
+            }
+            tr:hover 
+            {
+                background-color: #edb5b5;
+            }
+            tr:nth-child(even)
+             {
+                background-color: #f2f2f2;
+            }
+            table{
+                width: 102%;
+               
+            }
