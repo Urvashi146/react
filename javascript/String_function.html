@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String function</title>
+</head>
+<body>
+    <div>
+        <h1>string functions</h1>
+    </div>
+    <script>
+         var str = "this is urvashi only urvashi here"
+         console.log(str);
+//    indexof is used for first occurence of substring 
+         var position =str.indexOf('urvashi');
+         console.log(position);
+//    lastindexof is used for first occurence of substring 
+
+       var position = str.lastIndexOf('urvashi');
+       console.log(position);
+// substring from string slice and substring diff is that you can nnot add - value in substring 
+       var subslice =str.slice(6,15);
+       console.log(subslice);
+
+       var substr1 =str.substring(6,15);
+       console.log(substr1);
+
+    //    substr function substr(starting position,length) 
+
+    var substr2 =str.substr(8,7);
+    console.log(substr2);
+
+    // substring replacment  .replace('old strin','new string')
+
+    var replc =str.replace('here','right');
+    console.log(replc);
+    console.log(str);
+
+    // string uppercase
+    
+    console.log(str.toUpperCase());
+    
+    
+    // string lowercase
+   console.log(str.toLowerCase());
+
+//    trim use to delet  starting and ending space not inbetween
+
+var strtrim ="   first and ladt space has been gone   ";
+console.log(strtrim.trim());
+
+// charat show which character is on given position 
+
+ console.log(str.charAt(2));
+
+
+    </script>
+    
+</body>
+</html>
