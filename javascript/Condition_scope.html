@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scope and Conditionals</title>
 </head>
+
 <body>
     <div>
-        <ul>
-            <li>item-1</li>
-            <li>item-2</li>
-            <li>item-3</li>
-            <li>item-4</li>
-            <li>item-5</li>
-            <li>item-6</li>
-        </ul>
+        Scope and Conditionals
     </div>
-    
+    <script>
+        // var=let diff isthat by mistake you declare same variable then let gives you error of variable replication where as var is not give any error 
+        var a = "urvashi";
+        var a = "barot";
+
+        console.log(a);
+
+        // var=let diff isthat by mistake you declare same variable then let gives you error of variable replication where as var is not give any error 
+
+        // let a = "urvashi";
+        // let a= "barot";
+
+        // console.log(a);
+
+
+
+        // scope || local and globle varible 
+
+        // outside {} is globle and returns urvashi,,,,,,where as inside is local variable and returns barot 
+        let name1 = "urvashi";
+        {
+            let name1 = "barot";
+            console.log(name1);
+        }
+        console.log(name1);
+        // const function is used to fix value...tha means we can not allow to change once we declare with const keyword 
+        const con1 = "urvashi is urvashi";
+        // con1 ="want to change urvashi is urvashi"     try this and it wiil give you error
+        console.log(con1);
+
+        // if else conditional 
+        let age = 24;
+        if (age < 20) {
+            console.log("you are bachlor");
+
+        }
+        else {
+            console.log("you are not bacler now");
+        }
+
+        // if else if conditional 
+        let age1 = 25;
+
+        if (age1 < 20) {
+            console.log("you are bachlor");
+
+        }
+        else if (age1 == 24) {
+            console.log("this is r8 stage");
+        }
+        else if (age1 == 25) {
+            console.log("this is r8 stage 25");
+        }
+        else {
+            console.log("you are not bachlor now!!!1");
+        }
+
+
+        // switch case 
+        let day = "sunday";
+
+        switch (day) {
+            case "monday":
+                console.log("today is monday")
+                break;
+            case "tuesday":
+                console.log("today is tuesday")
+                break;
+            case "wednesday":
+                console.log("today is wednesday")
+                break;
+            case "thursday":
+                console.log("today is thursday")
+                break;
+            case "friday":
+                console.log("today is friday")
+                break;
+            case "saturday":
+                console.log("today is saturday")
+                break;
+            // case "sunday":
+            //     console.log("today is sunday")
+            //     break;
+
+            default:
+                console.log("its your bad day")
+                break;
+        }
+      
+
+    </script>
 </body>
+
 </html>
