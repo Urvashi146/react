@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time interval and timeout</title>
+</head>
+<body>
+    <h1>
+        Set time interval and timeout
+    </h1>
+    <script>
+        function timint(name)
+        {
+            console.log("good morning" + name);
+        }
+// this is set timeout 
+        // setTimeout(timint,5000,'urvashi');
+
+
+        // want to creal tomeout thn
+        // let timeout = setTimeout(timint,5000,'urvashi');
+        // clearTimeout(timeout)
+
+//    thi is set interval and it will show you count in console
+        setInterval(timint,2000,'urvashi');
+
+
+        // same as clear timout we can clear interval using same syntx just replace timeout to interval 
+         // let interva = setInterval(timint,5000,'urvashi');
+        // clearInterval(interva)
+    </script>
+</body>
+</html>
