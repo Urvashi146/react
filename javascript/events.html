@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        #btn
+        {
+            background-color: red;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>this is heading</h1>
+        <p id="pra">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum recusandae maxime et nulla fugiat ratione nobis nihil accusantium, minima, sed harum voluptates illo aliquam iusto provident corrupti culpa eum id.
+        Saepe architecto rerum, voluptatem repudiandae ducimus beatae, ipsum eaque, modi ipsam iure omnis velit. Natus ab dolore cumque, saepe soluta consectetur vitae laboriosam unde quibusdam quaerat magni. Sequi, explicabo aperiam.
+        Id doloremque animi soluta adipisci eligendi nobis rem laboriosam quas exercitationem eaque? Animi numquam molestias iusto blanditiis ex fugit. Perspiciatis, suscipit? Illo sit deleniti neque suscipit saepe dignissimos nemo similique?
+        Maxime eveniet alias deserunt atque molestiae ea officiis nobis doloremque consequuntur? Incidunt, soluta deleniti atque, non veritatis magnam at amet molestiae alias a quibusdam obcaecati facere, eligendi magni! At, aspernatur.</p>
+    </div>
+    <button id="btn" onclick="toggle()">show/hide</button>
+    <script>
+        function toggle()
+        {
+            let btn = document.getElementById('btn');
+            let pra = document.getElementById('pra');
+            if(pra.style.display =='none')
+            {
+                pra.style.display = 'block';
+
+            }
+            else
+            {
+                pra.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
