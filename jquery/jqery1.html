@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="hoverr">This is pragraph</p>
+    <p>This is pragraph</p>
+    <h3 class="cls">click any pragraph line to hide me .....an this gonna be happen using class in jquery</h3>
+    <h4 id="cls">click any pragraph line to hide me .....an this gonna be happen using id in jquery</h4>
+    <p>This is pragraph 1</p>
+    <p>This is pragraph 2</p>
+    <p>This is pragraph 3</p>
+    <p>This is pragraph 4</p>
+    <p>This is pragraph 4</p>
+    <p>This is pragraph 6</p>
+
+    <h2>click me to see magic</h2>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        console.log($);
+        // $(selector).(action) 
+        // $('p').click(
+        //     function(){
+        //         console.log('clicked on p');
+
+        //     }
+        // );
+
+
+        // use hide 
+        $('h2').click(
+            function () {
+                console.log('clicked on h2');
+                $('h2').hide();
+            }
+        )
+
+        // we have same element hten we may use this to perform asction of that pericular element insted of all element 
+
+        $('p').click(function () {
+            // console.log('you click on p');
+
+
+            $(this).hide();
+            $('#cls').hide();
+            $('.cls').hide();
+        }
+        );
+
+
+        $('#hoverr').mouseover(function () {
+            // console.log('you click on p');
+
+
+            // $(this).mouseover();
+
+            alert('you are here to try hover event in jquery');
+
+        }
+        );
+
+
+    })
+// there are three type of selector in jQuery
+// 1)id selector
+// 2)class selcrtor
+// 3) element selector
+
+</script>
+
+</html>

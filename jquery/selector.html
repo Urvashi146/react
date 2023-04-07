@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+</head>
+
+<body>
+    <!-- thui is elelment -->
+    <h1>click me and see this is h1 element selector</h1>
+    <!-- class  -->
+    <h1 class="classselect">click me and see this is h1 element with class class-selector</h1>
+
+    <!-- id  -->
+    <h1 id="idselect">click me and see this is h1 element with id idselector</h1>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        //         $('h1').click(function(){
+        //     $(h1).hide();
+        // })
+// this is using element 
+        $('h1').click(function () {
+            $(this).hide();
+        })
+//now lets use class as selector 
+
+$('.classselect').click(
+    function()
+    {
+        alert('perfect you use class as selector');
+    }
+)
+
+//now lets use class as selector 
+
+
+$('#idselect').click(
+    function()
+    {
+        alert('perfect you use id as selector');
+    }
+)
+
+
+
+
+
+
+    });
+</script>
+
+</html>

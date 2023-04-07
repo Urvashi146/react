@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show/hide game</title>
+</head>
+<body>
+    <p>lets play hide and seeeekkkk!!!!!!!!! click me</p>
+
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+
+
+    <p class="ani">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!
+    </p>
+    <p class="ani1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!
+    </p>
+    <p class="anitoggle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi debitis odio ea et inventore, magni sint impedit odit saepe. Ut aut eligendi in quam a tempore ab atque quibusdam!
+    </p>
+    <button class="btn">out</button>
+    <button class="btni">in</button>
+    <button class="slidup">slidup</button>
+    <button class="sliddown">sliddown</button>
+    <button class="toggle">toggle</button>
+
+
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+
+
+// $('#show').click(function()
+// {
+//     $('p').show('slow');
+// });
+
+// $('#hide').click(function()
+// {
+//     $('p').hide('fast');
+// });
+
+
+// $('.ani').hide(2000,function(){
+//     alert('finish with hiding!');
+// });
+
+// $('.ani').show(3000);
+
+
+
+
+// $('.ani1').hide(2000);
+
+// $('.ani1').show(2000);
+
+
+
+
+
+$('.btn').click(function()
+{
+    $('.anitoggle').fadeOut(1000);
+})
+
+
+$('.btni').click(function()
+{
+    $('.anitoggle').fadeIn(1000);
+})
+
+$('.slidup').click(function()
+{
+    $('.anitoggle').slideUp(1000);
+})
+$('.sliddown').click(function()
+{
+    $('.anitoggle').slideDown(1000);
+})
+$('.toggle').click(function()
+{
+    $('.anitoggle').toggle(2000);
+})
+
+
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
+</script>
+</html>

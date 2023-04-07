@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="hoverr">This is pragraph</p>
+    <p> double click me </p>
+    <h3>color magic!!!!</h3>
+
+
+    <h2>click me to see magic</h2>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // click 
+        $('h2').click(
+            function () {
+                console.log('clicked on h2');
+                $('h2').hide();
+            }
+        )
+
+        // we have same element hten we may use this to perform asction of that pericular element insted of all element 
+
+        // mouseover 
+        $('#hoverr').mouseover(function () {
+            // console.log('you click on p');
+
+
+            // $(this).mouseover();
+
+            alert('you are here to try hover event in jquery');
+
+        }
+        );
+        // double click 
+        $("p").dblclick(function () {
+            $(this).hide();
+
+        });
+
+        // focus 
+
+        $("input").focus(function () {
+            $(this).css("background-color", "red");
+        })
+
+
+        $("h3").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+
+
+
+
+
+
+    })
+
+
+
+</script>
+
+</html>

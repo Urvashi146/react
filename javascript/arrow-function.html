@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+
+    <h1>Arrow </h1>
+    <h1>this addition using arrow function<span id="demo"></span> </h1>
+
+    <script>
+//         let f1 = 10;
+//         let f2 =12;
+//         function add()
+//         {
+//             console.log(f1 + f2);
+
+//         }
+// add();
+// using arrow functon    we can declare above function as below using arrow function
+add = (a=2,b=2) =>{
+ console.log(a*b);   
+}
+add();
+
+
+// this is also arrow function without {}
+add1=(c,d)=>c*d
+    document.getElementById('demo').innerHTML=add1(2,3);
+
+// mul =(e,f)=>
+// {
+
+//     return
+// }
+// -------
+// same mul function with another shortcuts 
+
+mul=(e,f)=>e*f;
+// if we want to pass one parametr then we ca use another shortcut without().
+mul1=d=>d/2;
+
+function str()
+{
+    console.log("welcome");
+}
+str();
+
+
+// using arrow functon    we can declare above function as below using arrow function
+ str1 =()=>{
+    console.log("hiii");
+ }
+ str1();
+// this is also arrow function without {}
+
+str2=()=> console.log("without curly brac");
+str2();
+    </script>
+</body>
+</html>
