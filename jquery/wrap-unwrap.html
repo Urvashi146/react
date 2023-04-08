@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wrap-unwrap</title>
+    <style>
+        #box {
+            border: 10px solid black;
+            padding: 20px;
+        }
+
+        #box1 {
+            border: 10px solid rgb(243, 52, 52);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur consequuntur dignissimos explicabo
+            quos, harum culpa </p>
+    </div>
+    <button id="wrapp">wrap</button>
+    <button id="unwrapp">unwrap</button>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+
+
+        $('#wrapp').click(function () {
+            $('#box1 p').wrap('<h2></h2>');
+        });
+
+        $('#unwrapp').click(function () {
+            $('#box1 p').unwrap();
+        });
+
+
+
+    })
+</script>
+
+</html>
