@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Get</title>
+</head>
+<body>
+    <div id="box" class="sty abc def">
+        <h2>welcome</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas exercitationem tenetur quisquam, explicabo distinctio corrupti quis enim in soluta quia quidem unde sit officiis dolore? Sapiente minima doloribus ad. Impedit.</p>
+    </div>
+
+    <form action="" method="post" id="sform">
+        Name: <input type="text" name="name" id="name">
+        <input type="submit" name="submit">
+
+    </form>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+// this is html method of jquery 
+$(document).ready(function(){
+   let a=  $('#box').html();
+    console.log(a);
+
+// this is text method of jquery 
+
+let b =$('#box').text();
+console.log(b);
+
+// attr used to see which class is used in perticular given id 
+
+let c =$('#box').attr('class');
+console.log(c);
+
+//  value is used when we want to see given value in  form 
+
+$('#sform').submit(function(){
+
+    let name1 = $('#name').val();
+    alert('hello'+ "  " + name1);
+})
+
+
+
+})
+
+
+</script>
+
+
+</html>

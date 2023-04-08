@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Get</title>
+    <style>
+        .green
+        {
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="sty abc def">
+        <h2>welcome</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas exercitationem tenetur quisquam, explicabo
+            distinctio corrupti quis enim in soluta quia quidem unde sit officiis dolore? Sapiente minima doloribus ad.
+            Impedit.</p>
+        <button id="btn">click to chnage welcome</button>
+        <button id="btn1">click and see old text</button>
+
+        
+
+        <p id="boldd">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas exercitationem tenetur quisquam, explicabo
+            </p>
+        <button id="btnb">click to chnage welcome</button>
+
+    </div>
+    <br>
+
+    <form action="" method="post" id="sform">
+        Name: <input type="text" name="name" id="name" value="enter your name">
+        <input type="submit" name="submit">
+
+    </form>
+
+
+    <h2 id="green1" class="green">class change</h2>
+    <button id="cls">click me to change class</button>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    // this is get html method of jquery 
+    $(document).ready(function () {
+
+
+        $('#btnb').click(function () {
+            $('#boldd').html("<b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas exercitationem tenetur quisquam, explicabo</b>");
+            
+
+        });
+
+        // this is get text method of jquery 
+        $('#btn').click(function () {
+            $('#box h2').text("hello text set successfully!!!!");
+            
+
+        });
+        $('#btn1').click(function () {
+            $('#box h2').text('welcome');
+            
+
+        })
+
+
+        // attr used to change class
+            $('#cls').click(function(){
+
+               let c =  $('#green1').attr("class","red");
+               console.log(c);
+        
+
+            });
+        
+          
+        //  value is used to change value in  form 
+
+        $('#sform').submit(function () {
+
+             $('#name').val("urvashi");
+            
+        })
+
+
+
+    })
+
+
+</script>
+
+
+</html>
