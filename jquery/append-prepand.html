@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append-Prepand</title>
+</head>
+
+<body>
+    <div id="box">
+
+        <h1>welcome</h1>
+        <button class="app">append</button>
+        <button class="pre">prepend</button>
+
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+
+
+    // append will add content at bottom  
+$('.app').click(function () {
+    $('#box').append("<h1>helloooo</h1>");
+
+});
+
+// append will add content at top 
+
+$('.pre').click(function () {
+    $('#box').prepend("<h1>hiiii!!!!!!</h1>");
+
+})
+
+// same as you can apply this to tble and other elements 
+
+
+
+})
+
+</script>
+
+
+
+</html>
