@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Get</title>
+    <style>
+        .red {
+            background-color: red;
+            color: green;
+            border: 3px dotted burlywood;
+        }
+
+        .boxx {
+
+            margin: 10px;
+            text-align: center;
+            border: 2px solid black;
+            /* background-color: antiquewhite; */
+        }
+
+        .boxx1 {
+
+            margin: 20px;
+            text-align: center;
+            border: 2px solid black;
+            /* background-color: antiquewhite; */
+        }
+
+        .green {
+            background-color: rgb(123, 255, 0);
+            color: rgb(218, 228, 218);
+            border: 3px dotted rgb(150, 135, 222);
+
+
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="boxx">
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores eos ullam distinctio quos, nulla
+            consequuntur quas magnam earum et illo quisquam delectus id, dolorum dolorem aspernatur a! Veniam, ullam
+            dicta!
+        </p>
+
+    </div>
+
+
+    <div class="boxx1">
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores eos ullam distinctio quos, nulla
+            consequuntur quas magnam earum et illo quisquam delectus id, dolorum dolorem aspernatur a! Veniam, ullam
+            dicta!
+        </p>
+
+    </div>
+    <button id="btn">try off method</button>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('.boxx').on("mouseover mouseout", function () {
+
+            $(this).toggleClass("red");
+        })
+
+        
+        $('.boxx1').on({
+            "click": function () {
+                $(this).css("background","red");
+            },
+            "mouseover": function () {
+                $(this).css("background","green");
+
+            },
+
+            "mouseout": function () {
+                $(this).css("background","white")
+
+            }
+
+        })
+
+
+
+        // off is use to remove applied event 
+
+
+$('#btn').click(function(){
+
+$('.boxx1').off("mouseover mouseout")
+
+});
+
+
+    })
+
+
+</script>
+
+
+</html>
