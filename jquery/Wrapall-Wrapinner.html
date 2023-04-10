@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrapAll-Wrapinner</title>
+    <style>
+        .pink {
+            background-color: pink;
+            color: brown;
+        }
+
+        .gray {
+            background-color: aliceblue;
+            color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <h1 id="t1">
+        this is wrapall and wrapinner test
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam reiciendis neque voluptatum
+        beatae aliquid culpa, nobis voluptates iure! Fugiat aliquid, sapiente recusandae neque enim natus nostrum
+        dolorem quam consequuntur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquid fugit fugiat neque fuga, nemo asperiores
+        veritatis vel dignissimos ducimus dolore quis quisquam recusandae illo, praesentium quae eius quaerat dicta!
+    </p>
+    <button class="all">Wrap All</button>
+    <button class="inner">Wrap Inner</button>
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // this will wrap all p in div not noly single p 
+        $('.all').click(function () {
+
+            $('p').wrapAll('<div class="pink"></div>');
+        });
+// wrapinner will wrap only inner content 
+        $('.inner').click(function () {
+
+            $('h1').wrapInner('<span class="gray"></span>');
+        });
+
+
+
+
+
+
+
+
+
+    })
+</script>
+
+</html>
