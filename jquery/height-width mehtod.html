@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height and widht mehtod</title>
+    <style>
+        #hw {
+            background-color: antiquewhite;
+            border: 10px dotted black;
+            margin: 10px;
+            padding: 20px;
+        }
+        #wi-he
+        {
+            background-color: rgb(232, 192, 140);
+            border: 10px solid black;
+            margin: 20px;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="hw">
+        <h1>
+            Height And Width Methods
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis tempora modi exercitationem.
+            Quam officia in maxime, fugit saepe aliquid iure quidem provident hic sunt odio? Fuga ab iure commodi!</p>
+    </div><br><br>
+
+    <button class="w">width</button>
+    <button class="iw">Inner width</button>
+    <button class="ow">Outer width</button>
+    <button class="owt">OuterWidth true</button>
+
+
+
+    <div id="wi-he">
+        <h1>
+            Height And Width Methods
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis tempora modi exercitationem.
+            Quam officia in maxime, fugit saepe aliquid iure quidem provident hic sunt odio? Fuga ab iure commodi!</p>
+    </div><br><br>
+
+    <button class="h">Height</button>
+    <button class="ih">Inner Height</button>
+    <button class="oh">Outer Height</button>
+    <button class="oht">Outer Height true</button>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+// here i have used different methos for output for each width method  
+    $(document).ready(function () {
+
+        $('.w').click(function () {
+            // $('.w').width();
+            console.log("width : " + $('#hw').width());
+
+        })
+        // inner width 
+        // here i have used different methos for output for each width method  
+
+        $('.iw').click(function () {
+            alert("inner width is : " + $('#hw').innerWidth())
+        })
+
+
+  // here i have used different methos for output for each width method   
+    // outer width 
+
+    $('.ow').click(function () {
+        let a = $('#hw').outerWidth();
+        $('#hw').after("<br>" + "<b>outer width: </b>" + a );
+    })
+
+// outer true 
+
+    $('.owt').click(function () {
+        let b = $('#hw').outerWidth(true);
+        $('#hw').after("<b>outer width true: </b>" + b);
+    });
+
+// height 
+
+    $('.h').click(function () {
+        let c = $('#wi-he').height();
+        $('#wi-he').after("<br>" + "<b>Height: </b>" + c);
+    })
+// inner height 
+    $('.ih').click(function () {
+        let d = $('#wi-he').innerHeight();
+        $('#wi-he').after("<br>" + "<b>Inner Height: </b>" + d);
+    })
+// outer height 
+$('.oh').click(function () {
+        let e = $('#wi-he').outerHeight();
+        $('#wi-he').after("<br>" + "<b>outer Height: </b>" + e);
+    })
+
+    // outer height  true
+    $('.oht').click(function () {
+        let f = $('#wi-he').outerHeight(true);
+        $('#wi-he').after("<br>" + "<b>outer Height true: </b>" + f);
+    })
+    
+
+});
+
+</script>
+
+
+</html>
