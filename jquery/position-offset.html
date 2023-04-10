@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position And Offset</title>
+    <style>
+        #box {
+            background-color: antiquewhite;
+            border: 10px dotted black;
+            margin: 30px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>
+            Height And Width Methods
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis tempora modi exercitationem.
+            Quam officia in maxime, fugit saepe aliquid iure quidem provident hic sunt odio? Fuga ab iure commodi!</p>
+    </div>
+    <button class="p">position</button>
+    <button class="o">off set</button>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+// postion 
+        $('.p').click(
+            function () {
+                let a = $('#box h1').position();
+                // $('#box').after( "position" + a);
+                console.log(a);
+            }
+        );
+
+// offset 
+        // $('.o').click(
+        //     function () {
+        //         let b = $('#box h1').offset();
+        //         // $('#box').after( "position" + a);
+        //         console.log(b);
+        //     }
+        // )
+// you can use variable.top and variable .left to display saparate values for top and left 
+        $('.o').click(
+            function () {
+                let b = $('#box h1').offset();
+                // $('#box').after( "position" + a);
+                console.log("top:" + b.top + "left:" + b.left);
+            }
+        )
+
+
+
+    })
+</script>
+
+</html>
