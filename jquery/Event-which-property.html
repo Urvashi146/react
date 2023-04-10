@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-which-property</title>
+    <style>
+        div{
+            background-color: antiquewhite;
+            border: 10px solid black;
+            padding: 70px;
+        }
+        h1{
+            color: rgb(240, 77, 134);
+        }
+    </style>
+</head>
+<body>
+
+
+<h2> Event type</h2>
+    <div id="box">
+
+    </div>
+    name: <input type="text" id="ib">
+    <h1></h1>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('#box').on("mouseover mouseout mousedown",function(){
+        $('h1').html(event.type + " : " + event.which);
+    });
+
+    $('#ib').on("keydown",function(){
+        $('h1').html(event.type + " : " + event.which);
+    });
+
+})
+
+</script>
+</html>
