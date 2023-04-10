@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has Class</title>
+    <style>
+        .box{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, totam illo. Sint deserunt vitae similique rerum velit, sunt hic, deleniti nesciunt, neque iste dolorum asperiores reprehenderit? Tempora doloribus laborum ut?
+
+    </div>
+    <button id="cc">check class</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+
+
+// class ....-> it will display true if class is available or ele false 
+$(document).ready(function(){
+    $('#cc').click(function(){
+        console.log($('.box').hasClass('box'));
+
+    })
+
+
+
+})
+
+</script>
+</html>
