@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            background-color: azure;
+            border: 2px solid darkmagenta;
+        }
+
+        .col-md-3{
+            background-color: antiquewhite;
+            border: 2px solid darkred;
+        }
+        .pink
+        {
+            background-color: lightpink;        
+        }
+        .blue
+        {
+            background-color: lightblue;
+        }
+        .green
+        {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>without ordering</h1>
+        <div class="row">
+            <div class="col-md-3 pink">col 1</div>
+            <div class="col-md-3 blue">col 2</div>
+            <div class="col-md-3 green">col 3</div>
+            <div class="col-md-3">col 4</div>
+        </div>
+<!-- oreder  -->
+        <h1 class="display-1">after ordering</h1>
+        <div class="row">
+            <div class="col-md-3 order-last pink">col 1</div>
+            <div class="col-md-3 blue">col 2</div>
+            <div class="col-md-3 order-first green">col 3</div>
+            <div class="col-md-3 ">col 4</div>
+        </div>
+<!-- with order we can specify screen size so that till given size or brek point order will perform ...once it is rechs given size or brekpoint like here i gave md ..it display without ordering.  -->
+        <h1>ordering with break point md</h1>
+        <div class="row">
+            <div class="col-md-3 order-m1-last pink">col 1</div>
+            <div class="col-md-3 blue">col 2</div>
+            <div class="col-md-3 order-md-first green">col 3</div>
+            <div class="col-md-3 ">col 4</div>
+        </div>
+    </div>
+    
+</body>
+</html>
