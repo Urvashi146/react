@@ -20,7 +20,8 @@
                 <h2>Bootstrap carousel</h2>
                 <!-- carousel start from here  -->
 
-                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <!-- carousel-fade above is optional its add fade eefect on image instead of slide  -->
                     <!-- carousel indicator start from here  -->
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
@@ -31,14 +32,33 @@
 
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-interval="2000">
+                            <!-- data interval is external and optional class to image ......by default slide image time is 5 sec ..but if u want to change that time thn only u can use these class  -->
                             <img src="img/1.jpg" alt="Los Angeles" class="d-block" style="width:100%; height:500px">
+                            <!-- we can aslo add caption related to image -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>frist image</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita illo quod modi maiores cumque, deleniti quia quos reprehenderit quibusdam, nam odit. Provident velit amet iusto voluptatem rerum necessitatibus quis harum!</p>
+                            </div>
+                            <!-- caption end here for first img  -->
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-interval="2000">
                             <img src="img/2.jpg" alt="Chicago" class="d-block" style="width:100%; height:500px">
+                            <!--  add caption related to image -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>second image</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita illo quod modi maiores cumque, deleniti quia quos reprehenderit quibusdam, nam odit. Provident velit amet iusto voluptatem rerum necessitatibus quis harum!</p>
+                            </div>
+                            <!-- caption end here for second img  -->
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-interval="2000">
                             <img src="img/3.jpg" alt="New York" class="d-block" style="width:100%;height:500px">
+                            <!-- we can aslo add caption related to image -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>third image</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita illo quod modi maiores cumque, deleniti quia quos reprehenderit quibusdam, nam odit. Provident velit amet iusto voluptatem rerum necessitatibus quis harum!</p>
+                            </div>
+                            <!-- caption end here for first img  -->
                         </div>
                     </div>
 
