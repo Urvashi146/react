@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output(display posibilities)</title>
+    <style>
+        p{
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Output(display posibilities)
+    </h1>
+    <h2>
+        JavaScript can "display" data in different ways:</h2>
+        <!-- inner html  -->
+<h3>Writing into an HTML element, using innerHTML.</h3>
+<p id="inn"></p>
+<script>
+    document.getElementById("inn").innerHTML="see i used inner html to get this line";
+</script>
+<hr>
+<!-- document.write  -->
+<h3>Writing into the HTML output using <span style="text-decoration: underline;">document.write().</span> </h3>
+
+<h2><strong>For testing purposes, it is convenient to use document.write.<br>Using document.write() after an HTML document is loaded, will delete all existing HTML:</strong></h2>
+<!-- <script>
+    document.write("this simplay disply content");
+
+</script> -->
+
+
+<button onclick="document.write(' see all html content gone as i use onclick=document.write in buttn')">click</button>
+
+<hr>
+
+<!-- window.alert  -->
+<h3> Writing into an alert box, using window.alert().</h3>
+you will see out put once you come on this page first time or relaod page.
+-->You can use an alert box to display data:
+<script>
+    window.alert('this is using window alert');
+</script>
+
+
+
+You can skip the window keyword.
+
+In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:
+<hr>
+<!-- console.log() -->
+
+<h3> Writing into the browser console, using console.log().</h3>
+
+->F12 on your keyboard will activate debugging.
+->Then select "Console" in the debugger menu.
+->Then click Run again.
+-> you will see mz there which is welcome
+<script>
+console.log('welcome');
+</script>
+
+
+
+    </h2>
+    <hr>
+    <hr>
+other thing is....
+    <h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print page</button>
+
+    
+</body>
+</html>

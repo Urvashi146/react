@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types in javascript</title>
+</head>
+<body>
+
+    <pre>
+        JavaScript has 8 Datatypes
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
+
+The Object Datatype
+The object data type can contain:
+
+1. An object
+2. An array
+3. A date
+    </pre>
+
+
+    <h2>example</h2>
+
+<p>When adding a string and a number, JavaScript will treat the number as a string.</p>
+let x = "urvashi" + 14;
+<p id="demo"></p>
+
+<script>
+let x = "urvashi" + 14;
+document.getElementById("demo").innerHTML = x;
+</script>
+<hr>
+<p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+let x1 = 14 + 6 + "Volvo";
+<br>
+<span id="demo1"></span>
+
+<script>
+let x1 = 14 + 6 + "Volvo";
+document.getElementById("demo1").innerHTML = x1;
+</script>
+
+<hr>
+
+<h2>JavaScript Booleans</h2>
+
+<p>Booleans can have two values: true or false:</p>
+<pre>
+    let x2 = 5;
+let y = 5;
+let z = 6;
+
+document.getElementById("demo").innerHTML =
+(x2 == y) + "<br>" + (x2 == z);
+</pre>
+
+this is the ouput
+<p id="demo3"></p>
+
+<script>
+let x2 = 5;
+let y = 5;
+let z = 6;
+
+document.getElementById("demo3").innerHTML =
+(x2 == y) + "<br>" + (x2 == z);
+</script>
+<hr>
+
+
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+<pre>
+    const self = ["urvashi","barot","girl"];
+
+document.getElementById("ary").innerHTML = self[0];
+</pre>
+this is the output ->
+<p id="ary"></p>
+
+<script>
+const self = ["urvashi","barot","girl"];
+
+document.getElementById("ary").innerHTML = self[0];
+</script>
+
+<hr><hr>
+<br>
+
+<H1>The typeof Operator</H1>
+The typeof operator returns the type of a variable or an expression:
+
+<pre>
+typeof ""             // Returns string
+typeof "urvashi"         // Returns string
+typeof 314       // Returns number
+</pre>
+
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="demot"></p>
+
+<script>
+document.getElementById("demot").innerHTML = 
+typeof "" + "<br>" +
+typeof "urvashi" + "<br>" + 
+typeof 314  
+
+</script>
+    
+</body>
+</html>
