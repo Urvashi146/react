@@ -13,6 +13,11 @@
     <h1>
         function
     </h1>
+    <h2>
+        A JavaScript function is a block of code designed to perform a particular task.
+
+        <h3>A JavaScript function is executed when "something" invokes it (calls it).</h3>
+    </h2>
     <script>
 
         // variable declartion 
@@ -20,7 +25,7 @@
         let name1 = "barot";
         let name2 = "adroit";
         let name3 = "infosol";
-        
+
         // function craetion 
         function greet(name) {
             console.log(name + "hope you are fine");
@@ -33,28 +38,111 @@
         greet(name2);
         greet(name3);
 
-// add second paramert 
-         // variable declartion 
+        // add second paramert 
+        // variable declartion 
         //  let namee = "urvashi";
         // let name11 = "barot";
         // let name22 = "adroit";
         // let name33 = "infosol";
-        let text ="welcome to my wold"
+        let text = "welcome to my wold"
 
         // function craetion 
-        function greet(namee,text) {
-            console.log(namee + " " +text+"  " +"hope you are fine");
+        function greet(namee, text) {
+            console.log(namee + " " + text + "  " + "hope you are fine");
         }
 
         // function call 
 
-        greet(name,text);
-        greet(name1,text);
-        greet(name2,text);
-        greet(name3,text);
+        greet(name, text);
+        greet(name1, text);
+        greet(name2, text);
+        greet(name3, text);
 
 
     </script>
+
+
+
+
+    <h1>Function Return</h1>
+    When JavaScript reaches a return statement, the function will stop executing.
+    <pre>
+    let a= myfun(10,20);
+    document.getElementById("fet").innerHTML = a;
+
+    function myfun(x,y)
+    {
+        return x * y;
+    }
+</pre>
+    <strong>this is the output</strong>
+
+    <p id="fet"></p>
+    <script>
+
+        let a = myfun(10, 20);
+        document.getElementById("fet").innerHTML = a;
+
+        function myfun(x, y) {
+            return x * y;
+        }
+
+    </script>
+    <hr>
+
+    <pre>let b = uri("barot","urvashi");
+    document.getElementById('t2').innerHTML = b;
+    function uri(sname,nam)
+    {
+        return "surname is  " + sname + " "+ "and name is  " + nam;
+    }
+</pre>
+    <h1 id="t2"></h1>
+
+    <script>
+        let b = uri("barot", "urvashi");
+        document.getElementById('t2').innerHTML = b;
+        function uri(sname, nam) {
+            return "surname is  " + sname + " " + "and name is  " + nam;
+        }
+
+
+
+    </script>
+
+
+    <h1>local variable</h1>
+    <p>Outside myFunction() carName is undefined.</p>
+    
+    <pre>
+        myweb();
+        function myweb()
+        {
+        let web = "androit";
+        document.getElementById('web1').innerHTML = "this is datatype of var web :" + typeof web + " " + " and var value is
+        " + " " + web;
+    
+        }
+        document.getElementById('web2').innerHTML= typeof web;
+    </pre>
+
+    <h2 id="web1"></h2>
+    <h2 id="web2"></h2>
+<script>
+    myweb();
+
+    function myweb() {
+        let web = "androit";
+        document.getElementById('web1').innerHTML = "this is datatype of var web :" + typeof web + " " + " and var value is " + " " + web;
+
+    }
+    document.getElementById('web2').innerHTML = typeof web;
+
+</script>
+
+
+
+
 </body>
 
 </html>
