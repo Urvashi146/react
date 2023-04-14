@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser BOM</title>
+</head>
+<body>
+    <h1>The Browser Object Model (BOM)</h1>
+    <pre>
+        document.getElementById("bo").innerHTML =
+    "Browser inner window width: " +<strong> window.innerWidth </strong>+ "px<br>" +
+    "Browser inner window height: " + <strong>window.innerHeight</strong> + "px";
+    </pre>
+    <h2 id="bo"></h2>
+    <hr>
+    <h1>screen width</h1>
+    <pre>
+        document.getElementById("scr").innerHTML = 
+        "Screen width is " + screen.width;
+    </pre>
+    <h2 id="scr"></h2>
+    <hr>
+    <h1>screen height</h1>
+
+    <pre>
+        document.getElementById("scr1").innerHTML = 
+        "Screen width is " + screen.height;
+    </pre>
+    <h2 id="scr1"></h2>
+<script>
+    document.getElementById("bo").innerHTML =
+    "Browser inner window width: " + window.innerWidth + "px<br>" +
+    "Browser inner window height: " + window.innerHeight + "px";
+
+
+
+    // screen 
+    document.getElementById("scr").innerHTML = 
+"Screen width is " + screen.width;
+
+// height 
+document.getElementById("scr1").innerHTML = 
+"Screen height is " + screen.height;
+    </script>
+</body>
+</html>

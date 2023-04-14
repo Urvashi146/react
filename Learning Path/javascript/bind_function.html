@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind function </title>
+</head>
+<body>
+    <h1>JavaScript Function bind()</h1>
+
+<p>This example creates 2 objects (b1 and b2).</p>
+<p>The b2 object borrows the fullname method from b1:</p>
+
+<pre>
+    const b1 = {
+        firstName:"urvashi",
+        lastName: "barot",
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      
+      const b2 = {
+        firstName:"uri",
+        lastName: "shah",
+      }
+      
+      let fullName = b1.fullName.bind(b2);
+      
+      document.getElementById("bd").innerHTML = fullName();
+</pre>
+<h2>output -></h2>
+<p id="bd"></p>
+
+
+
+<script>
+    const b1 = {
+      firstName:"urvashi",
+      lastName: "barot",
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    
+    const b2 = {
+      firstName:"uri",
+      lastName: "shah",
+    }
+    
+    let fullName = b1.fullName.bind(b2);
+    
+    document.getElementById("bd").innerHTML = fullName();
+</script>
+
+
+</body>
+
+
+
+</html>

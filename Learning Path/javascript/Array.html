@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>ArrayS</h1>
+    <h2>This is simple array</h2>
+    <pre>
+        const name = ['urvashi','barot','adroit','infosol'];
+        document.getElementById('ar').innerHTML= name;
+    </pre>
+    <strong>this is the output-></strong>
+    <h2 id="ar"></h2>
+    <hr>
+    <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+    <p> document.getElementById('ar').innerHTML= name[1];</p>
+    <h2 id="ar1"></h2>
+    <hr>
+    <hr>
+
+    <h1>Converting Arrays to Strings</h1>
+    <h2>toString()</h2>
+    document.getElementById('ar1').innerHTML= name.toString();
+    <h2 id="str1"></h2>
+    <hr>
+    <hr>
+    <h2>Popping and Pushing</h2>
+    <pre>
+documnet.getElementById('ar1').innerHTML= name;
+        name.push('pushing');
+    </pre>
+    <h2 id="ar2"></h2>
+    <br>
+    <pre>
+    name.pop();
+        document.getElementById('ar3').innerHTML= name;
+        </pre>
+    <h2 id="ar3"></h2>
+    <hr>
+    <h2>shift()</h2>
+<p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+<pre>
+    name.shift();
+        document.getElementById("ar4").innerHTML = name;
+</pre>
+<h2 id="ar4"></h2>
+<hr>
+<h2>unshift()</h2>
+<p>The unshift() method adds new elements to the beginning of an array:</p>
+<pre>
+    name.unshift("web");
+        document.getElementById("ar5").innerHTML = name;
+</pre>
+<h2 id="ar5"></h2>
+<hr>
+
+
+
+
+    <script>
+        const name = ['urvashi', 'barot', 'adroit', 'infosol'];
+        document.getElementById('ar').innerHTML = name;
+
+        document.getElementById('ar1').innerHTML = name[1];
+        // convert intto string 
+        // document.getElementById('str1').innerHTML= name.toString();
+        // document.getElementById('str1').innerHTML= typeof name;
+
+        // pop and push 
+        name.push('pushing');
+        document.getElementById('ar2').innerHTML = name;
+        // console.log(name);
+
+        name.pop();
+        document.getElementById('ar3').innerHTML = name;
+
+        // shift array 
+
+        name.shift();
+        document.getElementById("ar4").innerHTML = name;
+
+// unshift 
+        name.unshift("web");
+        document.getElementById("ar5").innerHTML = name;
+
+
+    </script>
+</body>
+
+</html>

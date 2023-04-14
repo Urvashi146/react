@@ -19,6 +19,7 @@
 
     <div class="container">
         <h1>this is heading</h1>
+
         <p id="pra">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum recusandae maxime et nulla fugiat
             ratione nobis nihil accusantium, minima, sed harum voluptates illo aliquam iusto provident corrupti culpa
             eum id.
@@ -33,17 +34,21 @@
             At, aspernatur.</p>
     </div>
     <button id="btn" onclick="toggle()">show/hide</button>
+
+    <!-- <h2>also you can check console for more output</h2> -->
+    <h2 id="mo"></h2>
     <script>
 
 
         let pra = document.getElementById('pra');
         // pra.addEventListener('mouseover', function run() { alert('on pragrapg') });
         // pra.addEventListener('mouseout', function run() { alert('out pragrapg') });
-        pra.addEventListener('mouseover', function run() { console.log('on pragrapg') });
+        pra.addEventListener('mouseover', function run() { document.getElementById('mo').innerHTML= "on paragraph" });
 
-        pra.addEventListener('mouseout', function run() { console.log('out pragrapg') });
+        pra.addEventListener('mouseout', function run() { document.getElementById('mo').innerHTML= "out of  paragraph" });
 
-
+        // console.log('on pragrapg')
+        // console.log('out pragrapg')
 
         function toggle() {
             let btn = document.getElementById('btn');

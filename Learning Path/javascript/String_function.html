@@ -1,62 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String function</title>
 </head>
+
 <body>
     <div>
         <h1>string functions</h1>
+        <hr>
+        <P> var str = "this is urvashi only urvashi here"</P>
+        <h1 id="str"></h1>
+        <hr>
+        <p>indexof is used for <strong>first occurence</strong> of substring</p>
+        <P> var str = "this is urvashi only urvashi here"</P>
+
+        <Pre>var position =str.indexOf('urvashi');
+            document.getElementById('str1').innerHTML = position;</Pre>
+        <h1 id="str1"></h1>
+        <hr>
+        <p><strong>lastindexof</strong> is used for last occurence of substring </p>
+        <pre>
+            var position = str.lastIndexOf('urvashi');
+       document.getElementById('str2').innerHTML = position;
+        </pre>
+        <h1 id="str2"></h1>
+        <hr>
+        <h1>slice</h1>
+        <pre>
+            var subslice = str.slice(6, 15);
+            document.getElementById('str3').innerHTML = subslice;
+        </pre>
+        <h1 id="str3"></h1>
+        <hr>
+        <h1>Substring</h1>
+
+        <pre>
+            var substr1 = str.substring(6, 15);
+        document.getElementById('str4').innerHTML = substr1;
+        </pre>
+        <h1 id="str4"></h1>
+        <hr>
+        <h1>Replace</h1>
+
+        <pre>
+            var replc = str.replace('here', 'right');
+        document.getElementById('str6').innerHTML = str;
+        document.getElementById('str5').innerHTML = replc;
+        </pre> 
+        <h1 id="str5"></h1>
+        <h1 id="str6"></h1>
+        <hr>
+        <h1>toUpperCase()</h1>
+        <pre>document.getElementById('str7').innerHTML = str.toUpperCase(); </pre>
+        <h1 id="str7"></h1>
+        <hr>
+        <h1>toLowerCase()</h1>
+        <pre> document.getElementById('str8').innerHTML = str.toLowerCase();</pre>
+        <h1 id="str8"></h1>
+        <hr>
+        <h1>Trim()</h1>
+        <pre>
+            var strtrim = "   first and ladt space has been gone   ";
+        document.getElementById('str9').innerHTML = strtrim.trim();
+        </pre>
+        <h1 id="str9"></h1>
+        <hr>
+        <h1> charAt()</h1>
+        <p>
+            document.getElementById('str10').innerHTML = str.charAt(2);
+        </p>
+        <h1 id="str10"></h1>
+
+
     </div>
     <script>
-         var str = "this is urvashi only urvashi here"
-         console.log(str);
-//    indexof is used for first occurence of substring 
-         var position =str.indexOf('urvashi');
-         console.log(position);
-//    lastindexof is used for first occurence of substring 
+        var str = "this is urvashi only urvashi here"
+        document.getElementById('str').innerHTML = str;
+        console.log(str);
+        //    indexof is used for first occurence of substring 
+        var position = str.indexOf('urvashi');
+        document.getElementById('str1').innerHTML = position;
+        console.log(position);
+        //    lastindexof is used for last occurence of substring 
 
-       var position = str.lastIndexOf('urvashi');
-       console.log(position);
-// substring from string slice and substring diff is that you can nnot add - value in substring 
-       var subslice =str.slice(6,15);
-       console.log(subslice);
+        var position = str.lastIndexOf('urvashi');
+        document.getElementById('str2').innerHTML = position;
+        console.log(position);
+        // substring from string slice and substring diff is that you can nnot add - value in substring 
+        var subslice = str.slice(6, 15);
+        document.getElementById('str3').innerHTML = subslice;
 
-       var substr1 =str.substring(6,15);
-       console.log(substr1);
+        console.log(subslice);
+// ---- 
+        var substr1 = str.substring(6, 15);
+        document.getElementById('str4').innerHTML = substr1;
 
-    //    substr function substr(starting position,length) 
+        console.log(substr1);
 
-    var substr2 =str.substr(8,7);
-    console.log(substr2);
+        //    substr function substr(starting position,length) 
 
-    // substring replacment  .replace('old strin','new string')
+        var substr2 = str.substr(8, 7);
+        console.log(substr2);
 
-    var replc =str.replace('here','right');
-    console.log(replc);
-    console.log(str);
+        // substring replacment  .replace('old strin','new string')
 
-    // string uppercase
-    
-    console.log(str.toUpperCase());
-    
-    
-    // string lowercase
-   console.log(str.toLowerCase());
+        var replc = str.replace('here', 'right');
+        document.getElementById('str6').innerHTML = str;
+        document.getElementById('str5').innerHTML = replc;
 
-//    trim use to delet  starting and ending space not inbetween
 
-var strtrim ="   first and ladt space has been gone   ";
-console.log(strtrim.trim());
 
-// charat show which character is on given position 
+        console.log(replc);
+        console.log(str);
 
- console.log(str.charAt(2));
+        // string uppercase
+
+        console.log(str.toUpperCase());
+        document.getElementById('str7').innerHTML = str.toUpperCase();
+
+
+
+        // string lowercase
+        document.getElementById('str8').innerHTML = str.toLowerCase();
+
+        console.log(str.toLowerCase());
+
+        //    trim use to delet  starting and ending space not inbetween
+
+        var strtrim = "   first and ladt space has been gone   ";
+        document.getElementById('str9').innerHTML = strtrim.trim();
+
+        console.log(strtrim.trim());
+
+        // charat show which character is on given position 
+        document.getElementById('str10').innerHTML = str.charAt(2);
+
+        console.log(str.charAt(2));
 
 
     </script>
-    
+
 </body>
+
 </html>
