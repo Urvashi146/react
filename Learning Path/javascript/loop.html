@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loop</title>
 </head>
+
 <body>
     <h1>
         loops
     </h1>
+
+
+    <hr>
+    <pre>
+        let name = ["urvashi", "barot", "welcome"];
+        //   using for loop 
+        for (let i = 0; i < name.length; i++) {
+          
+            document.write("hello" + " :" + name[i] + "<br>")
+            // console.log("hello"+ " "+ name[i]);
+        }
+    </pre>
+    <h1 >output<br>hello :urvashi<br>
+        hello :barot<br>
+        hello :welcome</h1>
+    <hr>
+    <hr>
+    <h1>for in </h1>
+    <pre>
+    var obj ={
+        name : "urvashi",
+        surname : "barot",
+        age:25
+    };
+
+    for(var i in obj)
+    {
+        
+        document.write(i+ ":"+ obj[i]+"<br>")
+    }
+</pre>
+    <h1 id="fi">
+        output<br>
+        name:urvashi<br>
+        surname:barot<br>
+        age:25</h1>
 
     <script>
         // for(i=0;i<5 ;i++)
@@ -18,41 +56,53 @@
         // }
 
 
-      let name =["urvashi","barot","welcome"];
-    //   using for loop 
-    //   for(let i=0;i<name.length;i++)
-    //   {
-    //     console.log("hello"+ " "+ name[i]);
-    //   }
+        let name = ["urvashi", "barot", "welcome"];
+        //   using for loop 
+        for (let i = 0; i < name.length; i++) {
+
+            document.write("hello" + " :" + name[i] + "<br>")
+            // console.log("hello"+ " "+ name[i]);
+        }
 
 
-    // using foreach 
+        // using foreach 
 
-    // name.forEach(element => {
-    //     console.log(element);
-        
-    // });
+        // name.forEach(element => {
+        //     console.log(element);
 
-    // also use for of to display  same out put 
+        // });
 
-    for(element of name){
-        console.log(element);
-    }
+        // also use for of to display  same out put 
+
+        for (element of name) {
+            console.log(element);
+        }
 
 
 
-    // while loop 
+        // while loop 
 
-    let a=0
-    while(a<5)
-    {
-        console.log(`${a} is less thn 5`);
-        a++;
-    }
-    
+        let a = 0
+        while (a < 5) {
+            console.log(`${a} is less thn 5`);
+            a++;
+        }
+        //    for in ....... 
+        var obj = {
+            name: "urvashi",
+            surname: "barot",
+            age: 25
+        };
 
-    
+        for (var i in obj) {
+
+            document.write(i + ":" + obj[i] + "<br>")
+        }
+
+
+
     </script>
-    
+
 </body>
+
 </html>

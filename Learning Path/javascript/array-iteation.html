@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Iteration</title>
+</head>
+
+<body>
+    <h1>Array Iteration</h1>
+    <pre>
+        let a = ['urvashi', 'barot', 'androit', 'infosol'];
+
+        a.forEach(function (val, inx) {
+        document.write(inx + ":" + val + "<br>");
+
+        })
+       
+    </pre>
+    or
+    <pre>
+        let a = ['urvashi', 'barot', 'androit', 'infosol'];
+        a.forEach(l1);
+        function l1(val, inx) {
+            document.write(inx + ":" + val + "<br>");
+        }
+    </pre>
+    <h2>from both above declaration you will gwt same output</h2>
+<h2 id="dem"></h2>
+    <script>
+        let a = ['urvashi', 'barot', 'androit', 'infosol'];
+
+        a.forEach(function (val, inx) {
+            document.write(inx + ":" + val + "<br>");
+
+        })
+        // u can declare like this also both will get same result
+        // a.forEach(l1);
+        // function l1(val, inx) {
+        //     document.write(inx + ":" + val + "<br>");
+        // }
+
+
+        // map 
+
+        let b = [34, 45, 56, 78, 12, 23];
+        let c= b.map(f1);
+        document.getElementById("dem").innerHTML = c;
+
+        function f1(val) {
+            return val * 2;
+
+        }
+    </script>
+
+</body>
+
+</html>
