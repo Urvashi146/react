@@ -14,6 +14,16 @@
     <form>
         Email-id:<input type="text" name="name" id="eid" onfocus="focusfun(this)" onblur="blurfun(this)" oninput="onfun(this)"><br><br>
         password:<input type="text" name="name" id="pass" onfocus="focusfun(this)" onblur="blurfun(this)"><br>
+City:
+<select name="city" id="city" onfocus="focusfun(this)" onchange="chnfun(this)">
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Baroda">Baroda</option>
+    <option value="Surat">Surat</option>
+    <option value="Rajkot">Rajkot</option>
+    <option value="Mumbai">Mumbai</option>
+
+</select>
+
         <input type="submit" name="submit" id="submit"><br><br>
 
         <div id="input1" style="border: 2px solid black;"></div>
@@ -40,6 +50,12 @@
         {
             let a= e1.value;
             document.getElementById("input1").innerHTML=a;
+        }
+        function chnfun(e1)
+        {
+            let a= e1.value;
+            document.getElementById("input1").innerHTML=a;
+
         }
     </script>
 </body>
