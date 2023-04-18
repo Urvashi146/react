@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <form action="">
+            <div class="my-3">
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" name="email" id="email">
+            </div>
+            <div class="my-3">
+                <label for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            </div>
+            <!-- .....  -->
+            <div class="my-3">
+                <label for="checkbox">
+                    <input class="form-check-input" type="checkbox" name="charset" id="checkbox">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- grid  -->
+    <div class="container mt-3 border border-dark border-4">
+        <h2>Grid</h2>
+
+
+        <form action="" class="m-5">
+            <div class="row">
+                <div class="col">
+
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="col">
+
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter password">
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- size control  -->
+    <div class="container mt-3">
+        <h2>Size Control</h2>
+
+        <form action="">
+            <div class="my-3">
+                <h4>Size small</h4>
+
+                <label for="email">Email:</label>
+                <input class="form-control-sm" type="email" name="email" id="email">
+            </div>
+            <div class="my-3">
+                <h4>Size large</h4>
+
+                <label for="password">Password</label>
+                <input class="form-control-lg" type="password" name="password" id="password">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            </div>
+
+            <div class="my-3">
+                <label for="checkbox">
+                    <input class="form-check-input" type="checkbox" name="charset" id="checkbox">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
