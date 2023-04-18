@@ -85,6 +85,180 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <hr>
+    <!-- Disabled and Readonly  -->
+    <div class="container mt-3">
+        <h2>Disabled and Readonly</h2>
+
+        <form action="">
+            <div class="my-3">
+
+
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" name="email" id="email">
+            </div>
+            <div class="my-3">
+
+
+                <label for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password">
+            </div>
+            <h4>Readonly</h4>
+            <div class="my-3">
+                <input class="form-control" type="email" name="email" id="email" placeholder="readonly input" readonly>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <h4>Disable</h4>
+                <textarea class="form-control" rows="5" id="comment" name="text" disabled></textarea>
+            </div>
+
+            <div class="my-3">
+                <label for="checkbox">
+                    <input class="form-check-input" type="checkbox" name="charset" id="checkbox">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- color picker -->
+    <div class="container my-5 border border-4 border-primary">
+        <h2>color picker</h2>
+        <div class="row">
+            <input type="color" class="form-control form-control-color" value="#CCCCCC">
+        </div>
+    </div>
+
+    <!-- select multiple  -->
+    <div class="container my-5 border border-4 border-dark">
+        <div class="row">
+            <Form>
+                <label for="sel2" class="form-label">Mutiple select list (hold shift to select more than one):</label>
+                <select multiple class="form-select" id="s2" name="sellist ">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- checkbox  -->
+    <div class="container mt-3">
+        <h2>Checkboxes</h2>
+
+        <form action="">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                <label class="form-check-label" for="check1">1</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                <label class="form-check-label" for="check2">2</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" disabled>
+                <label class="form-check-label">3</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+        <hr>
+        <hr>
+        <!-- checkbox as toggle  -->
+        <h2>Toggle Switch using form-switch</h2>
+
+        <form action="">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="Switch" name="webdeveloper" value="yes" checked>
+                <label class="form-check-label" for="mySwitch">web devloper</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+
+    <div class="container my-5 border border-4 border-dark">
+        <div class="row">
+            <h2 style="text-decoration: underline;">range</h2>
+            <label class="form-check-label" for="range">
+                <h3>Experience</h3>
+            </label>
+
+            <input type="range" class="form-range" id="customRange" name="points">
+            <!-- With step  -->
+            <h3>With step</h3>
+            <input type="range" class="form-range" id="customRange" name="points" step="10">
+            <!-- Min and Max  -->
+            <h3>Min and Max</h3>
+            <input type="range" class="form-range" id="customRange" name="points" min="1" max="5">
+        </div>
+    </div>
+
+    <!-- input group  -->
+
+    <div class="container">
+        <h2>Input group</h2>
+        <form action="">
+
+            <div class="input-group mb-3">
+
+                <input class="form-control" type="email" name="email" id="email" placeholder="email.....">
+                <span class="input-group-text">@gmail.com</span>
+            </div>
+
+            <div class="input-group mb-3">
+
+
+                <span class="input-group-text">@</span>
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username here....">
+
+            </div>
+
+            <div class="input-group mb-3">
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username here....">
+                <button class="btn btn-primary" type="button">OK</button>
+            </div>
+            <div class="input-group mb-3">
+                <input class="form-control" type="text" name="username" id="username" placeholder="Search...">
+                <button class="btn btn-success" type="button">GO</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- flot input  -->
+    <div class="container mt-3">
+        <h2>Flot input</h2>
+        <form action="">
+            <div class="my-3 form-floating">
+                <input class="form-control" type="text" name="email" id="email" placeholder="First Name">
+                <label for="email">First Name</label>
+            </div>
+            <div class="my-3 form-floating">
+                <input class="form-control" type="text" name="password" id="password" placeholder="Last Name">
+                <label for="email">Last Name</label>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Form validation</h2>
+        <form action="" class="was-validated">
+            <div class="mb-3 mt-3">
+              <label for="uname" class="form-label">Username:</label>
+              <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+    </div>
 </body>
 
 </html>
