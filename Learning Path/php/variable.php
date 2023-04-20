@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echo</title>
+    <title>Variables</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -24,31 +24,33 @@
         }
         .col
         {
-            border:5px solid blue;
+            border:2px solid lightblue;
+            box-shadow: 0px 0px 30px gray;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Variables</h1>
+    <div class="container-fluid">
+        <h1 class="text-center" style="text-decoration:underline">$ Variables $</h1>
         <div class="row ">
             <div class="col m-5">
-                                <h1 style="color:green;  text-decoration:underline;">Variable</h1>
+              <h1 style="color:green;  text-decoration:underline;">Variable</h1>
                            
-                                <pre>
-                            <strong>
-                            < ?php
-                            $a= "Urvashi";
-                            echo $a;
-                            ?>
-                            </strong>
-                        </pre>
-                        <h3>output</h3>
-                    <?php
-                    $a= "Urvashi";
-                    echo $a;
-                    ?>
-            </div>
+                <pre>
+                <strong>
+                 < ?php
+                 $a= "Urvashi";
+                 echo $a;
+                ?>
+                 </strong>
+                </pre>
+             <h3>output</h3>
+            <?php
+            $a= "Urvashi";
+           echo $a;
+            ?>
+            </div> 
+
             <div class="col m-5">
              <h1 style="color:green;  text-decoration:underline;">Concate two variable</h1>
                          
@@ -153,7 +155,7 @@
     </div>
 
 
-<hr>
+
 
 
     
