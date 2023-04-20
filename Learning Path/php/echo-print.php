@@ -11,7 +11,7 @@
         
         h2
         {
-            color:blue;
+            color:green;
         }
         h3
         {
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col m-5">
 
-         <h1 style="color:green;  text-decoration:underline;">Echo</h1>
+         
          <h2>The PHP echo Statement</h2>
          <pre>
          <strong>
