@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+<h1 id="p1"></h1>
+<h1 id="p2"></h1>
+<h1 id="p3">pedding...this will fulfill after 3 sec!!!</h1>
+
+
+    <!-- <script>
+        const p =new Promise(
+            function(resolve,reject)
+            {
+                setTimeout(function(){resolve("this is after 3 sec!!")},3000);
+            }
+            
+        );
+
+        p.then(function(value){
+            document.getElementById("p1").innerHTML= value;
+        });
+
+        document.getElementById("p2").innerHTML= "this is last line";
+    </script> -->
+
+
+    <script>
+        const pro =new Promise (function(resolve,reject){
+            setTimeout(function(){resolve("this is fulfilled after 3 sec!!!")},3000);
+        });
+
+        pro.then(function(value){document.getElementById("p3").innerHTML=value});
+    </script>
+
+
+
+
+
+   
+
+
+
+
+</body>
+</html>
