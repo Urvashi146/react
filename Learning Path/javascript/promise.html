@@ -5,38 +5,287 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+        h2
+        {
+            color:red;
+        }
+        h3
+        {
+            color:green;
+        }
+        .row
+        {
+            border:3px solid green;
+            margin:5px;
+        }
+        .col
+        {
+            border:2px solid lightblue;
+            box-shadow: 0px 0px 30px gray;
+        }
+    </style>
+    <style>
+        
+        h2
+        {
+            color:red;
+        }
+        h3
+        {
+            color:green;
+        }
+        .row
+        {
+            border:3px solid green;
+            margin:5px;
+        }
+        .col
+        {
+            border:2px solid lightblue;
+            box-shadow: 0px 0px 30px gray;
+        }
+    </style>
 </head>
 <body>
-<h1 id="p1"></h1>
-<h1 id="p2"></h1>
-<h1 id="p3">pedding...this will fulfill after 3 sec!!!</h1>
 
 
-    <!-- <script>
-        const p =new Promise(
-            function(resolve,reject)
-            {
-                setTimeout(function(){resolve("this is after 3 sec!!")},3000);
-            }
+
+
+
+
+    <div class="container-fluid">
+        <h1 class="text-center" style="text-decoration:underline">Promise with .then and .catch and chaining</h1>
+    <div class="row">
+        <div class="col m-5">
+            <h3>Promise example 1</h3>
+            <pre>
+                <strong>
+                    
+            const p =new Promise(
+                    function(resolve,reject)
+                    {
+                        setTimeout(function(){resolve("this is after 3 sec!!")},3000);
+                    }
+                    
+                );
+        
+                p.then(function(value){
+                    document.getElementById("p1").innerHTML= value;
+                });
+        
+                document.getElementById("p2").innerHTML= "this is last line";
+            </strong></pre>
+
+               
+         </div>
+        <div class="col m-5">
+            <h2>Promise example 1 Output</h2>
+            <h1 id="p1"></h1>
+            <h1 id="p2"></h1>
+            <script>
+                const p =new Promise(
+                    function(resolve,reject)
+                    {
+                        setTimeout(function(){resolve("this is after 3 sec!!")},3000);
+                    }
+                    
+                );
+        
+                p.then(function(value){
+                    document.getElementById("p1").innerHTML= value;
+                });
+        
+                document.getElementById("p2").innerHTML= "this is last line";
+            </script>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col m-5">
+            <h3>Promise example 2</h3>
+
+            <pre>
+                <strong>
+                    const pro =new Promise (function(resolve,reject){
+                        setTimeout(function(){resolve("this is fulfilled after 3 sec!!!")},3000);
+                    });
             
-        );
-
-        p.then(function(value){
-            document.getElementById("p1").innerHTML= value;
-        });
-
-        document.getElementById("p2").innerHTML= "this is last line";
-    </script> -->
+                    pro.then(function(value){document.getElementById("p3").innerHTML=value});
 
 
-    <script>
-        const pro =new Promise (function(resolve,reject){
-            setTimeout(function(){resolve("this is fulfilled after 3 sec!!!")},3000);
-        });
+                </strong>
+            </pre>
+        </div>
+        <div class="col m-5">
+            <h2>Promise example 2 Output</h2>
 
-        pro.then(function(value){document.getElementById("p3").innerHTML=value});
-    </script>
+            <h1 id="p3">pedding...this will fulfill after 3 sec!!!</h1>
+            <script>
+                const pro1 =new Promise (function(resolve,reject){
+                    setTimeout(function(){resolve("this is fulfilled after 3 sec!!!")},3000);
+                });
+        
+                pro1.then(function(value){document.getElementById("p3").innerHTML=value});
+            </script>
+        </div>
+    </div>
 
+
+
+
+
+<div class="row">
+    <div class="col m-5">
+        <h3>Promise example 3</h3>
+
+        <pre>
+            <strong>
+                let a=4;
+    let promise1 = new Promise(function(resolve,reject){
+        if(a <= 5)
+        {
+            resolve("Successful");
+        }
+        else
+        {
+            reject("oopsss.....failed");
+
+        }
+    });
+    console.log(promise1); 
+    
+            </strong>
+        </pre>
+    </div>
+    <div class="col m-5">
+        <h2>Promise example 3 Output</h2>
+
+        <h2>Open console for output</h2>
+        <h4>you will see this:<br>
+            [[Prototype]]
+            : 
+            Promise<br>
+            [[PromiseState]]
+            : 
+            "fulfilled"<br>
+            [[PromiseResult]]
+            : 
+            "Successful"</h4>
+        <script>
+            let a=4;
+            let promise1 = new Promise(function(resolve,reject){
+                if(a <= 5)
+                {
+                    resolve("Successful");
+                }
+                else
+                {
+                    reject("oopsss.....failed");
+        
+                }
+            });
+            console.log(promise1); 
+        </script>
+    </div>
+</div>
+    
+   
+
+
+    <div class="row">
+        <div class="col m-5">
+            <h3>Promise example 4</h3>
+            <h4>With chaining</h4>
+
+            <pre>
+                <strong>
+                    
+                        function cal(a,b){
+                            return new Promise(function(resolve,reject)
+                            {
+                                document.getElementById('c1').innerHTML="fetching calculation wait!!!";
+                                let c=a/b;
+                                setTimeout(()=>{
+                                    if(a,b){
+                                    resolve(`done with calculation: ${c}`);
+                                }
+                                else
+                                {
+                                    reject("calculation failed");
+                
+                                }
+                            },2000)
+                                
+                            });
+                
+                        }
+                
+                
+                        cal(10,2).then((result)=>
+                        {
+                            document.getElementById('c2').innerHTML= result;
+                        }).catch((error)=>
+                        {
+                            document.getElementById('c3').innerHTML= error;
+                
+                
+                        });
+                         </strong>
+            </pre>
+        </div>
+        
+        <div class="col m-5">
+            <h2>Promise example 4 Output</h2>
+
+            <h1 id="c1"></h1>
+                        <h1 id="c2"></h1>
+                        <h1 id="c3"></h1>
+            <script>
+                function cal(a,b){
+                    return new Promise(function(resolve,reject)
+                    {
+                        document.getElementById('c1').innerHTML="fetching calculation wait!!!";
+                        let c=a/b;
+                        setTimeout(()=>{
+                            if(a,b){
+                            resolve(`done with calculation: ${c}`);
+                        }
+                        else
+                        {
+                            reject("calculation failed");
+        
+                        }
+                    },2000)
+                        
+                    });
+        
+                }
+        
+        
+                cal(10,2).then((result)=>
+                {
+                    document.getElementById('c2').innerHTML= result;
+                }).catch((error)=>
+                {
+                    document.getElementById('c3').innerHTML= error;
+        
+        
+                });
+        
+            </script>
+        
+
+        </div>
+    </div>
+</div>
+
+
+
+   
 
 
 
