@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD php-ajax</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD php-ajax</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-<!-- <h1 class="text-center "><u>CRUD</u></h1> -->
-<!-- navigation -->
-<!-- <nav class="navbar  navbar-expand-sm bg-success m-5 ">
-  <div class="container-fluid justify-content-center  ">
-    <ul class="navbar-nav ">
-      <li class="nav-item ">
-        <a class="nav-link active" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ADD</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">UPDATE</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">DELETE</a>
-      </li>
-    </ul>
+
+
+  <!-- main content table  -->
+  <div class="container">
+    <div class="row">
+      <h3 class="text-center shadow-dark m-3 border border-success rounded-lg shadow p-4 mb-4 bg-dark text-white">
+        <u><strong>CRUD PHP-AJAX</strong> </u>
+      </h3>
+
+    </div>
   </div>
-</nav> -->
-<!-- navigation end-->
 
-<!-- main content table  -->
-<h3 class="text-center "><u><strong>CRUD PHP-AJAX</strong> </u></h3>
 
-<h3 class="text-center "><u>All Records</u></h3>
 
-<div class="container mt-3">
-  <form class="m-5" id="inform">
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
+  <div class="container mt-3">
+    <h3 class="text-center "><u>Insert Records</u></h3>
+
+    <form id="inform" class="border border-success rounded-lg shadow p-4 mb-4 shadow-dark">
+      <div class="row m-2">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Enter address" name="address" id="address">
+        </div>
       </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Enter address" name="address" id="address">
+      <div class="row m-2">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Enter class" name="class" id="class">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Enter phone number" name="phone" id="phone">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Enter class" name="class" id="class">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Enter phone number" name="phone" id="phone">
-      </div>
-    </div>
-    <!-- <div class="row">
+ 
+
+
+
+      <!-- <div class="row">
       <div class="col">
         
       </div>
@@ -62,113 +57,212 @@
         <input type="button" value="Insert" id="insert-data" class="btn btn-primary">
       </div>
     </div> -->
-  </form>
+    </form>
 
-  <div class="text-center">
-    <input type="button" value="Insert" id="insert-data" class="btn btn-primary m-4 ">
-  </div>
+    <div class="text-center">
+      <input type="button" value="Insert" id="insert-data" class="btn btn-primary m-3 ">
+    </div>
 
-<table class="table table-primary table-hover table-bordered ">
+    <div class="container mt-2 mb-2 ">
+      <div class="row">
+        <div class="col">
+          <h2><u><strong>All Records</strong> </u></h2>
 
-  <tr>
+        </div>
+        <div class="col text-end ">
+           
+          <input type="text" name="search" autocomplete="off" placeholder="Search By Name" id="search-value" class="bg-dark p-2 rounded-pill border border-1 border-danger text-center text-white  " >
+         
+          
+
+        </div>
+      </div>
+
+    </div>
+    <!-- <tr>
     <td class="text-center">
       <h2>Php With Ajax</h2>
     </td>
-  </tr>
+  </tr> -->
 
-  <!-- <tr >
+    <!-- <tr >
     <td id="table-load" class="text-center ">
       <input type="button" value="Insert" id="insert-data">
     </td>
   </tr> -->
-
-<tr>
-  <td id="load-data">
-    <table class="table table-dark table-hover table-bordered ">
+    <table class="table table-primary table-hover table-bordered ">
       <tr>
-        <th>id</th>
-        <th>name</th>
+        <td id="load-data">
+          <!-- <table class="table table-dark table-hover table-bordered ">
+
+          </table> -->
+        </td>
       </tr>
-      
+      <!-- search  -->
+      <tr>
+        <td id="search-data"></td>
+      </tr>
+      <!-- search end -->
+
+
     </table>
-  </td>
-</tr>
+
+    <div class="modal fade" id="mymodal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Edit Form</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <!-- Modal body -->
+          <div class='modal-body'>
 
 
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary m-3" data-dismiss="modal" id="update-data">Update</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
 
+    <!-- main content table end  -->
 
-</table>
-  
-</div>
-<!-- main content table end  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
 
-<script>
-  $(document).ready(function(){
-   
-  //  select ajax start
-    function loadtable(){
-    $.ajax({
-        url : "select-ajax-php.php",
-        type : "POST",
-        success : function(data){
-          $('#load-data').html(data);
+        //  select ajax start
+        function loadtable() {
+          $.ajax({
+            url: "select-ajax-php.php",
+            type: "POST",
+            success: function (data) {
+              $('#load-data').html(data);
+            }
+          });
         }
-      });
-    }
-    loadtable();
-  //  select ajax end
+        loadtable();
+        //  select ajax end
 
-// insert ajax start 
-    $('#insert-data').on("click",function(e){
-      // e.preventDefault();
-      var name = $("#name").val();
-      var add = $("#address").val();
-      var class1 = $("#class").val();
-      var phone = $("#phone").val();
+        // insert ajax start 
+        $('#insert-data').on("click", function (e) {
+          // e.preventDefault();
+          var name = $("#name").val();
+          var add = $("#address").val();
+          var class1 = $("#class").val();
+          var phone = $("#phone").val();
 
-      $.ajax({
-        url : "insert-ajax-php.php",
-        type : "POST",
-        data : {aname:name, aaddress:add, aclass:class1, aphone:phone},
-        success : function(data){
-          // $('#load-data').html(data);
+          $.ajax({
+            url: "insert-ajax-php.php",
+            type: "POST",
+            data: { aname: name, aaddress: add, aclass: class1, aphone: phone },
+            success: function (data) {
+              // $('#load-data').html(data);
+
+              loadtable();
+              $('#inform').trigger("reset");
+            }
+          });
+        });
+        // insert ajax ends 
+
+        // delete ajax starts 
+        $(document).on("click", ".delete-btn", function () {
+          var sid = $(this).data("id");
+          var element = this;
+          $.ajax({
+
+            url: "delete-ajax-php.php",
+            type: "POST",
+            data: { id: sid },
+            success: function (data) {
+              $(element).closest("tr").fadeOut();
+            }
+
+
+          });
+        })
+        // delete ajax ends 
+
+        // edit starts here
+        // show modal
+        $(document).on("click", ".edit-btn", function () {
+          $("#mymodal").show();
+          var studentid = $(this).data("eid");
+          // alert(studentid);
+
+          $.ajax({
+            url: "update-ajax-php.php",
+            type: "POST",
+            data: { id: studentid },
+            success: function (data) {
+              $(".modal-body").html(data);
+
+            }
+
+          })
+
+        });
+        // hide modal 
+        // $(document).on("click","#close1",function(){
+        //   $("#mymodal").hide();
+        // });
+
+
+
+        // save edit form 
+        $(document).on("click", "#update-data", function () {
+          var stuid = $("#uid").val();
+          var name = $("#uname").val();
+          var add = $("#uaddress").val();
+          var cla = $("#uclass").val();
+          var phn = $("#uphone").val();
+
+          $.ajax({
+            url: "updatesave-ajax-php.php",
+            type: "POST",
+            data: { stid: stuid, sname: name, sadd: add, scla: cla, sphn: phn },
+            success: function (data) {
+              // $("#mymodal").hide();
+              alert("updated successfully! click on close button");
+              loadtable();
+            }
+          })
+
+
+        });
+
+        // edit ends here 
+
+        // search start from here 
+        $("#search-value").on("keyup",function(){
+           var search_str = $(this).val();
           
-            loadtable();
-            $('#inform').trigger("reset");  
-        }
+           $.ajax({
+              url : "search-ajax-php.php",
+              type: "POST",
+              data : { search : search_str },
+              success : function(data){
+                $("#load-data").html(data);
+
+              }
+
+           });
+        });
+        // search end here 
+
+
       });
-    });
-// insert ajax ends 
+    </script>
 
-// delete ajax starts 
-$(document).on("click",".delete-btn",function(){
- var sid =  $(this).data("id");
- var element = this;
-
- $.ajax({
-
-    url:"delete-ajax-php.php",
-    type:"POST",
-    data : {id: sid},
-    success : function(data){
-      $(element).closest("tr").fadeOut();
-    }
-
-
- });
-
-})
-// delete ajax ends 
-
-
-
-
-   
-  });
-</script>    
-    
 </body>
+
 </html>
