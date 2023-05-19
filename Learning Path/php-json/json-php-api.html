@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json-php-api</title>
+</head>
+
+<body>
+    <h1>json-ajx-php</h1>
+   
+       <!-- <form >
+limit:<input type="text" name="limit" id="limit">
+offset:<input type="text" name="offset" id="offset">
+<input type="button" value="sumbit" id="submit">
+
+       </form> -->
+
+       <div id="data-table"></div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      
+      $(document).ready(function () {
+       $("submit").click(function(){
+        var lim = $("#limit").val();
+                var off = $("#offset").val();
+       
+            $.ajax({
+
+                
+                url: "json-php-api.php",
+                type: "GET",
+                // data :{limit:lim,offset:off},
+                // dataType:"JSON",
+                success: function (data) {
+                    // $.each(data,function(key,value){
+                    //     $("#data-table").html(value.id + " " + value.firstname + " " +value.email );
+                    // })
+                    // console.log(data)
+                        // $("#data-table").html(data);
+                        // var html_append = "";
+                        // $.each(data,function(index, item){
+                        //     html_append = 
+                        //     '<li><strong>ID: </strong>'+ 
+                        //         item.id + 
+                        //         '&nbsp; &nbsp; <strong>Name: </strong>'+ 
+                        //         item.firstname +
+                        //          '&nbsp; &nbsp; <strong>Email: </strong>' + item.email + '</li>';
+                        // });
+                        $("#data-table").html(data);
+
+                }
+
+
+            });
+
+        })
+        });
+    
+    // $.getJSON(
+    //     "json-php-api.php",
+    //     function(data){
+    //         console.log(data);
+    //     }
+        
+    //     );
+    </script>
+</body>
+
+</html>

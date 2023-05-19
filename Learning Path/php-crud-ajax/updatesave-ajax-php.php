@@ -21,6 +21,6 @@ echo $res = mysqli_query($con,$sql) or die("sql query failed");
 // }else{
 //     echo 0;
 // }
-
+// header(Location:"./index.html")
 
 ?>
