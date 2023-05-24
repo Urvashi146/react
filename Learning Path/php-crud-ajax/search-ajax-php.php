@@ -39,9 +39,6 @@ if(mysqli_num_rows($res) > 0)
     <th>phone</th>
     <th>Edit</th>
     <th>Delete</th>
-   
-   
-
 
     </tr>";
 
@@ -55,9 +52,11 @@ if(mysqli_num_rows($res) > 0)
         <td>{$row["class"]}</td>
 
         <td>{$row["phone"]}</td>
-        <td><button type='button' class='btn btn-success edit-btn m-1'  data-bs-toggle='modal' data-bs-target='#mymodal' data-eid='{$row["id"]}'>&#9998;</button></td>
+        <td><button type='button' class='btn btn-success edit-btn m-1'  
+        data-bs-toggle='modal' data-bs-target='#mymodal' data-eid='{$row["id"]}'>&#9998;</button></td>
 
-        <td><button type='button' class='btn btn-danger delete-btn m-1'  data-id='{$row["id"]}'><i class='fa fa-trash' ></i></button></td>
+        <td><button type='button' class='btn btn-danger delete-btn m-1'  data-id='{$row["id"]}'>
+        <i class='fa fa-trash' ></i></button></td>
 
 
         </tr>";
