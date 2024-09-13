@@ -1,0 +1,16 @@
+1. npm create vite@latest
+2. cd folder naem
+3. npm install
+4. npm run dev
+after this you will reciev link http://localhost:5173/
+
+
+
+notes :import
+1. import filename from "./filename"
+or
+2.import {filename} from "./filename"
+
+EXPORT:
+
+export defualt filename;
