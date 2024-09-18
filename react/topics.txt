@@ -1,0 +1,8 @@
+Module 1. Introduction to React. js.
+Module 2. Creating Your First React Application.
+Module 3. Understanding Components and Props.
+Module 4. State and Lifecycle.
+Module 5. React Hooks.
+Module 6. Handling Events.
+Module 7. Working with Forms.
+Module 8. Conditional Rendering.

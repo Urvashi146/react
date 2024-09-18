@@ -1,5 +1,5 @@
 1. npm create vite@latest
-2. cd folder naem
+2. cd folder name
 3. npm install
 4. npm run dev
 after this you will reciev link http://localhost:5173/
