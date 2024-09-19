@@ -1,9 +1,21 @@
+
+this when using vite
 1. npm create vite@latest
 2. cd folder name
 3. npm install
 4. npm run dev
 after this you will reciev link http://localhost:5173/
 
+this is without vite/normal proccess.cd demo
+(when wish to use npx)
+1. npx create-react-app foldername
+2. cd foldername
+3. npm start
+4.npm run build.
+
+(when wish to use npm)
+1.npm install create-react-app -g
+2.create-react-app<projectname>
 
 
 notes :import
