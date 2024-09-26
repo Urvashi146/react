@@ -1,7 +1,7 @@
 import React from "react";
 // this is using jsx
 const Withjsx = () => (
-  <div>
+  <div id="mydiv" className="abc">
     <h1>Hi, I am using JSX here.</h1>
   </div>
 );
