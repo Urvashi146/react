@@ -6,3 +6,5 @@ const PropDemo = (props) => {
 }
 
 export default PropDemo
+
+// However, props are immutable—a term from computer science meaning “unchangeable”.
